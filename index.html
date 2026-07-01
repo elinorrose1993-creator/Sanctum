@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANCTUM — Specialist Gambling Therapy</title>
+  <meta name="description" content="Anonymous, specialist therapy for problem gambling. Find a therapist who understands — on your terms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6L12 16.8 6.6 19.5l1.2-6L3.4 9.3l6-.7L12 3Z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-loc" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.4-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h9a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></symbol>
+  </svg>
+
+  <!-- ============ ENTRANCE GATE ============ -->
+  <div class="gate" id="gate">
+    <div class="gate__half gate__half--l"></div>
+    <div class="gate__half gate__half--r"></div>
+    <div class="gate__center">
+      <button class="gate__crest" id="gateCrest" type="button" aria-label="Enter Sanctum">
+        <span class="fort">
+          <svg class="fort__art" viewBox="0 0 120 152" aria-hidden="true">
+            <defs>
+              <radialGradient id="sxGlow" cx="50%" cy="56%" r="55%">
+                <stop offset="0%" stop-color="#E8CF9B" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#C2A06B" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse class="fort__glow" cx="60" cy="90" rx="30" ry="40" fill="url(#sxGlow)" opacity=".15"/>
+            <g fill="none" stroke="#C2A06B" stroke-linejoin="miter" stroke-linecap="butt">
+              <path d="M29 140 L29 51 Q29 16 60 1 Q91 16 91 51 L91 140" stroke-width="2"/>
+              <path d="M42 140 L42 56 Q42 26 60 12 Q78 26 78 56 L78 140" stroke-width="1.5"/>
+              <path d="M22 140 H98" stroke-width="1.5"/>
+              <path d="M60 2 L63.5 7 L60 12 L56.5 7 Z" stroke-width="1.3"/>
+            </g>
+          </svg>
+          <span class="fort__enter">Enter</span>
+        </span>
+      </button>
+      <div class="gate__word">SANCTUM</div>
+      <p class="gate__tag">A safe space for gambling recovery</p>
+      <p class="gate__hint">Anonymous · Specialist · No judgment</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" data-go="home" href="#">
+        <svg class="brand__mark" viewBox="0 0 100 116" aria-hidden="true">
+          <path d="M24 108 L24 44 Q24 12 50 1.5 Q76 12 76 44 L76 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="miter"/><path d="M50 2 L53.5 6.5 L50 11 L46.5 6.5 Z" fill="currentColor"/>
+        </svg>
+        <span class="brand__word">SANCTUM</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a data-go="search" href="#">Find a therapist</a>
+        <a data-go="how" href="#">How it works</a>
+        <a data-go="support" href="#">Support</a>
+        <a data-go="therapists" href="#">For therapists</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--ghost btn--sm" data-go="therapists" href="#">I'm a therapist</a>
+        <a class="btn btn--primary btn--sm" data-go="search" href="#">Find support</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HOME ================= -->
+    <section class="view view--active" id="view-home">
+      <div class="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="wrap hero__inner">
+          <span class="eyebrow"><svg class="ico"><use href="#i-lock"/></svg> Anonymous · Specialist · No judgment</span>
+          <h1 class="hero__title">Find solid ground.</h1>
+          <p class="hero__sub">Specialist therapy for problem gambling — and for the people it affects. Choose a therapist who understands, on your terms. Private from the first click.</p>
+          <div class="hero__choice">
+            <a class="choicecard" data-go="search" href="#">
+              <div class="choicecard__top">
+                <svg class="ico ico--lg"><use href="#i-search"/></svg>
+                <span class="choicecard__tag">For you</span>
+              </div>
+              <h3>I'm looking for support</h3>
+              <p>Search a vetted bank of gambling specialists and find the right fit.</p>
+              <span class="link-arrow">Browse therapists <svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="choicecard" data-go="therapists" href="#">
+              <div class="choicecard__top">
+                <svg class="ico ico--lg"><use href="#i-shield"/></svg>
+                <span class="choicecard__tag">For practitioners</span>
+              </div>
+              <h3>I'm a therapist</h3>
+              <p>Reach clients who need you. Keep 100% of your fee — one flat subscription.</p>
+              <span class="link-arrow">See how it works <svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <div class="rampart" aria-hidden="true"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="trustrow">
+          <div class="trustrow__item"><svg class="ico"><use href="#i-lock"/></svg><span>Fully anonymous until <em>you</em> decide otherwise</span></div>
+          <div class="trustrow__item"><svg class="ico"><use href="#i-shield"/></svg><span>Every therapist accredited &amp; verified</span></div>
+          <div class="trustrow__item"><svg class="ico"><use href="#i-heart"/></svg><span>Gambling specialists — not generalists</span></div>
+        </div>
+      </div>
+
+      <div class="crenel-divider" aria-hidden="true"></div>
+
+      <section class="wrap section">
+        <div class="section__head">
+          <span class="kicker">How it works</span>
+          <h2>Three steps to the right therapist.</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">01</span>
+            <h3>Tell us what you need</h3>
+            <p>Filter by what matters to you — specialism, lived experience, gender, accreditation, budget. No sign-up required to search.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">02</span>
+            <h3>Choose your therapist</h3>
+            <p>Read real profiles and reviews. Pick the person who fits — you stay anonymous the whole way.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">03</span>
+            <h3>Start your plan</h3>
+            <p>Agree a treatment plan built around your situation, and begin. Pay your therapist directly — they keep every penny.</p>
+          </div>
+        </div>
+        <div class="section__cta">
+          <a class="btn btn--primary" data-go="search" href="#">Find your therapist <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap band__inner">
+          <div class="band__copy">
+            <span class="kicker">Why Sanctum is different</span>
+            <h2>Specialists in gambling. Only.</h2>
+            <p>Gambling addiction is underestimated, and easy to feel ashamed of. On the big platforms you'd scroll past hundreds of generalists, hoping someone just <em>gets it</em>. Here, every practitioner specialises in gambling and its fallout — so you find real, specialist help, and somewhere to find solace, from your very first message.</p>
+            <ul class="ticks">
+              <li><svg class="ico"><use href="#i-check"/></svg> Only gambling specialists — never generalists</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Built for an addiction the world underestimates</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Understood from the start — no explaining the basics</li>
+            </ul>
+            <a class="btn btn--outline" data-go="search" href="#">Find your specialist</a>
+          </div>
+          <div class="band__panel">
+            <div class="comparecard">
+              <div class="comparecard__row comparecard__row--head"><span>Finding the right help</span></div>
+              <div class="comparecard__row"><span>Other platforms</span><span class="bar"><i style="width:34%"></i></span><b>Hundreds of generalists</b></div>
+              <div class="comparecard__row comparecard__row--us"><span>Sanctum</span><span class="bar bar--full"><i style="width:100%"></i></span><b>Gambling specialists, matched</b></div>
+              <p class="comparecard__note">No wading through therapists who can't give specialist advice. Just the right people for exactly what you're facing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= SEARCH ================= -->
+    <section class="view" id="view-search">
+      <div class="subhead">
+        <div class="wrap">
+          <h1>Find a therapist</h1>
+          <p>A vetted bank of specialists in gambling and its impact. Search freely — you stay anonymous.</p>
+        </div>
+      </div>
+      <div class="wrap searchlayout">
+        <aside class="filters" id="filters">
+          <div class="filters__head">
+            <h2>Filter</h2>
+            <button class="btn btn--ghost btn--xs" id="resetFilters" type="button">Reset</button>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Search</span>
+            <span class="field__search">
+              <svg class="ico"><use href="#i-search"/></svg>
+              <input type="text" id="fSearch" placeholder="Name or specialism" autocomplete="off" />
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Location</span>
+            <select id="fLocation">
+              <option value="">Anywhere</option>
+              <option value="Online">Online sessions</option>
+              <option value="London">London</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Bristol">Bristol</option>
+              <option value="Leeds">Leeds</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Sydney">Sydney</option>
+              <option value="Melbourne">Melbourne</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Field of work</span>
+            <select id="fField">
+              <option value="">All specialisms</option>
+              <option>Problem &amp; compulsive gambling</option>
+              <option>Online &amp; sports betting</option>
+              <option>Behavioural addiction</option>
+              <option>Relapse prevention</option>
+              <option>Co-occurring anxiety &amp; depression</option>
+              <option>Trauma-informed recovery</option>
+              <option>Family &amp; relationship impact</option>
+              <option>Financial therapy &amp; debt stress</option>
+              <option>Young people &amp; gambling</option>
+              <option>Group programs</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Accreditation</span>
+            <select id="fAccred">
+              <option value="">Any body</option>
+              <option>BACP</option>
+              <option>UKCP</option>
+              <option>NCS</option>
+              <option>BPS</option>
+              <option>PACFA</option>
+              <option>APS</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Experience</span>
+            <select id="fExp">
+              <option value="0">Any</option>
+              <option value="3">3+ years</option>
+              <option value="5">5+ years</option>
+              <option value="10">10+ years</option>
+              <option value="15">15+ years</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Minimum rating</span>
+            <select id="fRating">
+              <option value="0">Any</option>
+              <option value="4">4.0+</option>
+              <option value="4.5">4.5+</option>
+              <option value="4.8">4.8+</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Gender</span>
+            <select id="fGender">
+              <option value="">Any</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Non-binary</option>
+            </select>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" id="fLived" />
+            <span class="toggle__box"><svg class="ico"><use href="#i-check"/></svg></span>
+            <span class="toggle__text">Has lived experience of gambling recovery</span>
+          </label>
+        </aside>
+
+        <div class="results">
+          <div class="results__bar">
+            <span id="resultCount" class="results__count">—</span>
+            <label class="sort">
+              <span>Sort</span>
+              <select id="fSort">
+                <option value="recommended">Recommended</option>
+                <option value="rating">Highest rated</option>
+                <option value="experience">Most experienced</option>
+                <option value="priceLow">Price: low to high</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid" id="therapistGrid"></div>
+          <div class="empty" id="emptyState" hidden>
+            <svg class="ico ico--xl"><use href="#i-search"/></svg>
+            <h3>No therapists match those filters</h3>
+            <p>Try widening your search — fewer filters, or online sessions.</p>
+            <button class="btn btn--outline btn--sm" type="button" data-reset>Reset filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+    <section class="view" id="view-profile">
+      <div class="wrap">
+        <button class="backlink" data-go="search" type="button"><svg class="ico"><use href="#i-arrow"/></svg> Back to results</button>
+      </div>
+      <div class="wrap profile" id="profileBody"><!-- JS --></div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="view" id="view-how">
+      <div class="subhead">
+        <div class="wrap">
+          <h1>How Sanctum works</h1>
+          <p>A specialist space for gambling recovery, built to be fair on both sides.</p>
+        </div>
+      </div>
+
+      <section class="wrap section">
+        <div class="splitnote">
+          <div class="splitnote__col">
+            <span class="kicker"><svg class="ico"><use href="#i-search"/></svg> For people seeking help</span>
+            <ol class="flow">
+              <li><b>Search anonymously.</b> No account needed to browse. Filter by specialism, lived experience, gender, budget and more.</li>
+              <li><b>Pick your person.</b> Real profiles, real reviews, clear pricing. Gambling specialists only.</li>
+              <li><b>Agree a plan.</b> Your therapist shapes a treatment plan around your situation — debt stress, relapse, family impact, whatever you're carrying.</li>
+              <li><b>One clear membership.</b> You pay a single Sanctum membership for access, then pay your therapist their fee directly. No hidden cuts.</li>
+            </ol>
+            <a class="btn btn--primary btn--sm" data-go="search" href="#">Start your search</a>
+          </div>
+          <div class="splitnote__col">
+            <span class="kicker"><svg class="ico"><use href="#i-shield"/></svg> For therapists</span>
+            <ol class="flow">
+              <li><b>Build your profile.</b> Showcase your accreditation, approach, specialisms and lived experience.</li>
+              <li><b>Get found.</b> Be matched to clients actively seeking gambling support — a steady, focused stream.</li>
+              <li><b>Keep your whole fee.</b> Set your own rate and keep 100%. We never take a session cut.</li>
+              <li><b>One flat subscription.</b> A simple monthly membership — that's the entire cost of being on Sanctum.</li>
+            </ol>
+            <a class="btn btn--outline btn--sm" data-go="therapists" href="#">Pricing for therapists</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap band__inner band__inner--center">
+          <div class="band__copy band__copy--wide">
+            <span class="kicker">Why gambling, specifically</span>
+            <h2>One wound, many shapes.</h2>
+            <p>Gambling harm isn't one problem. It's debt and shame, relapse and secrecy, families fractured, young people pulled in by apps built to hook them. Generalist therapy often misses the specifics. Sanctum brings together people who work in <em>exactly</em> this — so you're understood from the first session, not explaining the basics.</p>
+            <div class="safebox">
+              <svg class="ico ico--lg"><use href="#i-shield"/></svg>
+              <div>
+                <h3>A safe space, by design</h3>
+                <p>Anonymous browsing, verified practitioners, and crisis support one tap away — always. Your privacy is the foundation, not an afterthought.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= FOR THERAPISTS ================= -->
+    <section class="view" id="view-therapists">
+      <div class="hero hero--sm">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="wrap hero__inner">
+          <span class="eyebrow"><svg class="ico"><use href="#i-shield"/></svg> For practitioners</span>
+          <h1 class="hero__title hero__title--sm">Keep every penny you earn.</h1>
+          <p class="hero__sub">Reach clients who are actively looking for gambling support. Set your own fee, keep 100% of it, and pay one flat subscription — never a cut of your sessions.</p>
+          <a class="btn btn--primary" href="#" data-scroll="pricing">See membership <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="rampart" aria-hidden="true"></div>
+      </div>
+
+      <section class="wrap section">
+        <div class="valuegrid">
+          <div class="valuecard"><svg class="ico ico--lg"><use href="#i-heart"/></svg><h3>100% of your fee</h3><p>You set your rate. You keep all of it. We never skim a session.</p></div>
+          <div class="valuecard"><svg class="ico ico--lg"><use href="#i-user"/></svg><h3>Focused clients</h3><p>Every person here is seeking gambling support. No noise, no tyre-kickers.</p></div>
+          <div class="valuecard"><svg class="ico ico--lg"><use href="#i-shield"/></svg><h3>Your practice, your way</h3><p>Online or in person, your hours, your approach. Sanctum is the introduction, not the boss.</p></div>
+          <div class="valuecard"><svg class="ico ico--lg"><use href="#i-lock"/></svg><h3>Trusted &amp; verified</h3><p>A vetted network clients can trust — your accreditation, checked and badged.</p></div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap band__inner">
+          <div class="band__copy">
+            <span class="kicker">Fair by design</span>
+            <h2>Keep your whole fee.</h2>
+            <p>Most platforms quietly take a cut of every session — out of your pocket. We don't. Pay one flat subscription and keep 100% of what you charge. The client pays a separate Sanctum membership for access to the network — that's what keeps your fee whole.</p>
+            <ul class="ticks">
+              <li><svg class="ico"><use href="#i-check"/></svg> No commission skimmed from sessions</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> You set your rate — and keep all of it</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> One transparent subscription, cancel anytime</li>
+            </ul>
+            <a class="btn btn--outline" data-scroll="pricing" href="#">See membership</a>
+          </div>
+          <div class="band__panel">
+            <div class="comparecard">
+              <div class="comparecard__row comparecard__row--head"><span>Where your money goes</span></div>
+              <div class="comparecard__row"><span>Other platforms</span><span class="bar"><i style="width:55%"></i></span><b>~45% to you</b></div>
+              <div class="comparecard__row comparecard__row--us"><span>Sanctum</span><span class="bar bar--full"><i style="width:100%"></i></span><b>100% to you</b></div>
+              <p class="comparecard__note">You keep every penny of your session fee. Clients pay one clear membership for access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="pricing">
+        <div class="section__head">
+          <span class="kicker">Membership</span>
+          <h2>One subscription. No commission. Ever.</h2>
+          <div class="billtoggle">
+            <button class="billtoggle__btn is-active" data-bill="monthly" type="button">Monthly</button>
+            <button class="billtoggle__btn" data-bill="annual" type="button">Annual <span class="save">Save 20%</span></button>
+          </div>
+        </div>
+        <div class="pricegrid">
+          <div class="pricecard">
+            <h3 class="pricecard__name">Associate</h3>
+            <p class="pricecard__for">New to the network</p>
+            <div class="pricecard__price"><span class="amount" data-m="29" data-a="23">£29</span><span class="per">/ month</span></div>
+            <ul class="ticks">
+              <li><svg class="ico"><use href="#i-check"/></svg> Listed profile &amp; search presence</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Keep 100% of your fee</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Up to 15 active clients</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Secure messaging</li>
+            </ul>
+            <button class="btn btn--outline btn--block" type="button" data-join>Get started</button>
+          </div>
+          <div class="pricecard pricecard--feature">
+            <span class="pricecard__flag">Most chosen</span>
+            <h3 class="pricecard__name">Practitioner</h3>
+            <p class="pricecard__for">Established gambling specialists</p>
+            <div class="pricecard__price"><span class="amount" data-m="59" data-a="47">£59</span><span class="per">/ month</span></div>
+            <ul class="ticks">
+              <li><svg class="ico"><use href="#i-check"/></svg> Priority search ranking</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Unlimited clients</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Verified &amp; lived-experience badges</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Treatment-plan tools</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Reviews &amp; analytics</li>
+            </ul>
+            <button class="btn btn--primary btn--block" type="button" data-join>Get started</button>
+          </div>
+          <div class="pricecard">
+            <h3 class="pricecard__name">Practice</h3>
+            <p class="pricecard__for">Clinics &amp; group programs</p>
+            <div class="pricecard__price"><span class="amount" data-m="149" data-a="119">£149</span><span class="per">/ month</span></div>
+            <ul class="ticks">
+              <li><svg class="ico"><use href="#i-check"/></svg> Up to 6 practitioners</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Group program listings</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Shared clinic profile</li>
+              <li><svg class="ico"><use href="#i-check"/></svg> Dedicated support</li>
+            </ul>
+            <button class="btn btn--outline btn--block" type="button" data-join>Talk to us</button>
+          </div>
+        </div>
+        <p class="fineprint">Clients pay a separate Sanctum membership for access to the network — that's what keeps your fee whole. Cancel anytime.</p>
+      </section>
+
+      <section class="wrap section">
+        <div class="section__head">
+          <span class="kicker">Your dashboard</span>
+          <h2>Everything you need, nothing you don't.</h2>
+        </div>
+        <div class="dashmock">
+          <div class="dashmock__side">
+            <div class="dashmock__brand"><svg class="brand__mark" viewBox="0 0 100 116"><path d="M24 108 L24 44 Q24 12 50 1.5 Q76 12 76 44 L76 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="miter"/><path d="M50 2 L53.5 6.5 L50 11 L46.5 6.5 Z" fill="currentColor"/></svg><span>Practitioner</span></div>
+            <nav class="dashmock__nav">
+              <span class="is-active">Overview</span><span>My profile</span><span>Clients</span><span>Treatment plans</span><span>Messages</span><span>Earnings</span><span>Settings</span>
+            </nav>
+          </div>
+          <div class="dashmock__main">
+            <div class="dashmock__stats">
+              <div class="statcard"><span class="statcard__k">Profile views</span><span class="statcard__v">1,248</span><span class="statcard__d">+18% this month</span></div>
+              <div class="statcard"><span class="statcard__k">Active clients</span><span class="statcard__v">14</span><span class="statcard__d">3 new enquiries</span></div>
+              <div class="statcard"><span class="statcard__k">Avg. rating</span><span class="statcard__v">4.9</span><span class="statcard__d">87 reviews</span></div>
+              <div class="statcard statcard--accent"><span class="statcard__k">Your fee kept</span><span class="statcard__v">100%</span><span class="statcard__d">£0 commission</span></div>
+            </div>
+            <div class="dashmock__row">
+              <div class="dashpanel">
+                <h4>New enquiries</h4>
+                <div class="enq"><span class="avatar avatar--sm">A</span><div><b>Anonymous · #4821</b><small>Online betting · relapse support</small></div><span class="pill">New</span></div>
+                <div class="enq"><span class="avatar avatar--sm">A</span><div><b>Anonymous · #4817</b><small>Debt stress · weekly sessions</small></div><span class="pill">New</span></div>
+                <div class="enq"><span class="avatar avatar--sm">A</span><div><b>Anonymous · #4805</b><small>Affected family member</small></div><span class="pill pill--mute">Replied</span></div>
+              </div>
+              <div class="dashpanel">
+                <h4>Your profile strength</h4>
+                <div class="meter"><i style="width:82%"></i></div>
+                <small class="meter__label">82% complete</small>
+                <ul class="dashtodo">
+                  <li class="done"><svg class="ico"><use href="#i-check"/></svg> Accreditation verified</li>
+                  <li class="done"><svg class="ico"><use href="#i-check"/></svg> Bio &amp; specialisms added</li>
+                  <li><span class="dot"></span> Add a short intro video</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">Illustrative preview — the therapist interface as it would look.</p>
+      </section>
+    </section>
+
+    <!-- ================= SUPPORT ================= -->
+    <section class="view" id="view-support">
+      <div class="crisis-banner">
+        <div class="wrap crisis-banner__inner">
+          <div class="crisis-banner__text">
+            <strong>In crisis right now?</strong>
+            <span>If you or someone else is in immediate danger, call your local emergency number. You don't have to wait.</span>
+          </div>
+          <button class="btn btn--danger btn--sm" data-crisis type="button"><svg class="ico"><use href="#i-phone"/></svg> Crisis lines</button>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <div class="wrap">
+          <h1>Support &amp; knowledge</h1>
+          <p>Understanding gambling harm — and where to turn, any hour of the day.</p>
+        </div>
+      </div>
+
+      <section class="wrap section">
+        <div class="kb">
+          <article class="kbcard"><span class="kbcard__tag">Getting started</span><h3>Is my gambling a problem?</h3><p>Honest questions to ask yourself, and what the signs really look like.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+          <article class="kbcard"><span class="kbcard__tag">Money</span><h3>Taking back control of debt</h3><p>Practical first steps for the financial side of gambling harm.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+          <article class="kbcard"><span class="kbcard__tag">Relapse</span><h3>After a slip: what now?</h3><p>A relapse isn't the end. How to steady yourself and keep going.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+          <article class="kbcard"><span class="kbcard__tag">Families</span><h3>When someone you love gambles</h3><p>Support for partners, parents and friends carrying the weight too.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+          <article class="kbcard"><span class="kbcard__tag">Tools</span><h3>Blocking apps &amp; self-exclusion</h3><p>The practical guards you can put up today, in minutes.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+          <article class="kbcard"><span class="kbcard__tag">Therapy</span><h3>What to expect from sessions</h3><p>How gambling-specialist therapy actually works, step by step.</p><span class="link-arrow">Read <svg class="ico"><use href="#i-arrow"/></svg></span></article>
+        </div>
+      </section>
+
+      <section class="wrap section">
+        <div class="helplines">
+          <div class="helplines__head">
+            <span class="kicker"><svg class="ico"><use href="#i-phone"/></svg> Free, confidential helplines</span>
+            <h2>Talk to someone now.</h2>
+            <p class="muted">Examples shown — these would be localised to each visitor's region.</p>
+          </div>
+          <div class="helpline-grid">
+            <div class="helpline"><b>National Gambling Helpline</b><span class="muted">UK · 24/7</span><a class="helpline__num">0808 8020 133</a></div>
+            <div class="helpline"><b>Gambling Help Online</b><span class="muted">Australia · 24/7</span><a class="helpline__num">1800 858 858</a></div>
+            <div class="helpline"><b>Samaritans</b><span class="muted">UK &amp; ROI · 24/7</span><a class="helpline__num">116 123</a></div>
+            <div class="helpline"><b>Lifeline</b><span class="muted">Australia · 24/7</span><a class="helpline__num">13 11 14</a></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <a class="brand" data-go="home" href="#">
+          <svg class="brand__mark" viewBox="0 0 100 116" aria-hidden="true"><path d="M24 108 L24 44 Q24 12 50 1.5 Q76 12 76 44 L76 108" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="miter"/><path d="M50 2 L53.5 6.5 L50 11 L46.5 6.5 Z" fill="currentColor"/></svg>
+          <span class="brand__word">SANCTUM</span>
+        </a>
+        <p>A safe space for gambling recovery. Specialist, anonymous, and fair to the people who do the work.</p>
+      </div>
+      <div class="footer__cols">
+        <div><h4>Find help</h4><a data-go="search" href="#">Find a therapist</a><a data-go="support" href="#">Support &amp; knowledge</a><a data-crisis href="#">Crisis lines</a></div>
+        <div><h4>Therapists</h4><a data-go="therapists" href="#">Join Sanctum</a><a data-go="therapists" href="#">Pricing</a><a data-go="how" href="#">How it works</a></div>
+        <div><h4>Sanctum</h4><a data-go="how" href="#">About</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <span>© 2026 Sanctum — working prototype</span>
+      <span class="muted">If you are in immediate danger, call your local emergency services.</span>
+    </div>
+  </footer>
+
+  <!-- ============ CRISIS FAB ============ -->
+  <button class="fab" id="fab" type="button" aria-label="Get help now">
+    <svg class="ico ico--lg"><use href="#i-heart"/></svg>
+    <span>Need help now?</span>
+  </button>
+
+  <!-- ============ MODALS ============ -->
+  <div class="modal" id="crisisModal" hidden>
+    <div class="modal__scrim" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Crisis support">
+      <button class="modal__close" data-close type="button"><svg class="ico"><use href="#i-close"/></svg></button>
+      <span class="modal__eyebrow"><svg class="ico"><use href="#i-heart"/></svg> You're not alone</span>
+      <h2>Reach someone right now</h2>
+      <p class="muted">Free and confidential. If you're in immediate danger, call your local emergency number first.</p>
+      <div class="modal__lines">
+        <div class="helpline helpline--row"><div><b>National Gambling Helpline</b><span class="muted">UK · 24/7</span></div><span class="helpline__num">0808 8020 133</span></div>
+        <div class="helpline helpline--row"><div><b>Gambling Help Online</b><span class="muted">Australia · 24/7</span></div><span class="helpline__num">1800 858 858</span></div>
+        <div class="helpline helpline--row"><div><b>Samaritans</b><span class="muted">UK &amp; ROI · 24/7</span></div><span class="helpline__num">116 123</span></div>
+      </div>
+      <button class="btn btn--outline btn--block" id="openChatFromCrisis" type="button"><svg class="ico"><use href="#i-chat"/></svg> Or message our support team</button>
+    </div>
+  </div>
+
+  <div class="modal" id="connectModal" hidden>
+    <div class="modal__scrim" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-label="Connect">
+      <button class="modal__close" data-close type="button"><svg class="ico"><use href="#i-close"/></svg></button>
+      <span class="modal__eyebrow"><svg class="ico"><use href="#i-lock"/></svg> Private &amp; anonymous</span>
+      <h2 id="connectTitle">Request a first session</h2>
+      <p class="muted">You'll stay anonymous. Your therapist only sees what you choose to share — no real name needed to start.</p>
+      <div class="connectsteps">
+        <div class="connectstep"><span class="connectstep__n">1</span><p>Send a private enquiry with what you're looking for.</p></div>
+        <div class="connectstep"><span class="connectstep__n">2</span><p>Agree a treatment plan and session time that suits you.</p></div>
+        <div class="connectstep"><span class="connectstep__n">3</span><p>Begin — pay your therapist their full fee directly.</p></div>
+      </div>
+      <button class="btn btn--primary btn--block" data-close type="button">Send anonymous enquiry</button>
+      <p class="fineprint">Prototype — no message is actually sent.</p>
+    </div>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div class="chat" id="chat" hidden>
+    <div class="chat__head">
+      <div class="chat__id"><span class="chat__dot"></span> Sanctum support</div>
+      <button class="chat__close" data-chat-close type="button"><svg class="ico"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat__log" id="chatLog">
+      <div class="bubble bubble--bot">Hi — you've reached Sanctum support. This is a safe, private space. How are you doing today?</div>
+    </div>
+    <form class="chat__form" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type a message…" autocomplete="off" />
+      <button class="btn btn--primary btn--sm" type="submit">Send</button>
+    </form>
+    <p class="chat__note">Prototype assistant · For real crisis support use the helplines above.</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
