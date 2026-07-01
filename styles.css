@@ -151,7 +151,7 @@ a:hover .link-arrow .ico,.link-arrow:hover .ico{transform:translateX(4px)}
 .hero__title{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.02em;max-width:14ch}
 .hero__title--sm{font-size:clamp(2.2rem,5vw,3.6rem)}
 .hero__sub{margin-top:22px;max-width:56ch;font-size:1.12rem;color:var(--text-2)}
-.hero__sub + .btn{margin-top:38px}
+.hero__sub + .btn{margin-top:48px}
 .hero__choice{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px}
 
 .choicecard{
